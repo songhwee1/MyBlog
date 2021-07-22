@@ -43,10 +43,15 @@ class Header extends Component {
       display: this.state.buttonDisplay
     };
 
+    const imgStyle = {
+      width:"100%",
+      height: "30vh"
+    }
+
     return (
       <div>
         <Navbar>
-          <Navbar.Brand href="/">Today I Learned</Navbar.Brand>
+          <Navbar.Brand href="/">Hwi Song(송휘)</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <NavLink to="/">
@@ -64,7 +69,7 @@ class Header extends Component {
             </Button>
           </Navbar.Collapse>
         </Navbar>
-        <Image src="./img/main.png" fluid />
+        <Image style={imgStyle} src="./img/sea.jpg" fluid />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CKEditor from "ckeditor4-react";
+import CKEditor from "@ckeditor/ckeditor5-react";
 import { Button, Form} from "react-bootstrap";
 import axios from "axios";
 import $ from "jquery";

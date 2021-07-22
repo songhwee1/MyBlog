@@ -17,7 +17,7 @@ class Body extends Component {
         resultForm = <Route exact path="/" component={BoardForm}></Route>;
         return resultForm;
       } else {
-        resultForm = <Route exact path="/" component={LoginForm}></Route>;
+        resultForm = <Route exact path="/" component={BoardForm}></Route>;
         return resultForm;
       }
     }
