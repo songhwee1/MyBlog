@@ -12,7 +12,6 @@ Node.js + React + MongoDB
 - Backend Server  Node.js
     - express
     - express-session
-    - cors
-
+    
 - Database  MongoDB
     - mongoose
