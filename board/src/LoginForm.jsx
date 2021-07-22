@@ -126,47 +126,14 @@ class LoginForm extends Component {
       margin: 50
     };
     const buttonStyle = {
-      marginTop: 10
+      marginTop: 10,
+      background: "black",
+      border:"black",
+      color: "white",
     };
 
     return (
       <Form style={formStyle}>
-        <Form.Group controlId="joinForm">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            maxLength="100"
-            ref={ref => (this.joinEmail = ref)}
-            placeholder="Enter email"
-          />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-          <Form.Label>name</Form.Label>
-          <Form.Control
-            type="text"
-            maxLength="20"
-            ref={ref => (this.joinName = ref)}
-            placeholder="name"
-          />
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            maxLength="64"
-            ref={ref => (this.joinPw = ref)}
-            placeholder="Password"
-          />
-          <Button
-            style={buttonStyle}
-            onClick={this.join}
-            variant="primary"
-            type="button"
-            block
-          >
-            회원가입
-          </Button>
-        </Form.Group>
-
         <Form.Group controlId="loginForm">
           <Form.Label>Email address</Form.Label>
           <Form.Control

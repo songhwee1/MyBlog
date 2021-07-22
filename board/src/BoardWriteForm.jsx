@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CKEditor from "@ckeditor/ckeditor5-react";
+import { CKEditor } from "ckeditor4-react";
 import { Button, Form} from "react-bootstrap";
 import axios from "axios";
 import $ from "jquery";
@@ -35,11 +35,10 @@ class BoardWriteForm extends Component {
 
     if (boardTitle === undefined || boardTitle === "") {
       alert("글 제목을 입력 해주세요.");
-      boardTitle.focus();
       return;
     } else if (boardContent === undefined || boardContent === "") {
       alert("글 내용을 입력 해주세요.");
-      boardContent.focus();
+      return;
     }
     
     if (this.props.location.query !== undefined) {

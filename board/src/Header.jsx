@@ -9,13 +9,15 @@ const headers = { withCredentials: true };
 
 class Header extends Component {
   state = {
-    buttonDisplay: "none"
+    buttonDisplay: "none",
+    buttonLogin: "block"
   };
 
   componentDidMount() {
     if ($.cookie("login_id")) {
       this.setState({
-        buttonDisplay: "block"
+        buttonDisplay: "block",
+        buttonLogin:"none"
       });
     } else {
       this.setState({
@@ -38,10 +40,25 @@ class Header extends Component {
       });
   };
   render() {
+    const mainTextStyle={
+      margin: "5px 5px 5px 20px",
+    }
+
     const buttonStyle = {
       margin: "0px 5px 0px 10px",
+      background: "white",
+      border:"white",
+      color: "black",
       display: this.state.buttonDisplay
     };
+
+    const buttonLogin = {
+      margin: "0px 5px 0px 10px",
+      background: "white",
+      border:"white",
+      color: "black",
+      display: this.state.buttonLogin
+    }
 
     const imgStyle = {
       width:"100%",
@@ -51,21 +68,23 @@ class Header extends Component {
     return (
       <div>
         <Navbar>
-          <Navbar.Brand href="/">Hwi Song(송휘)</Navbar.Brand>
+          <Navbar.Brand style={mainTextStyle} href="/">
+            Error 404 - My Office
+          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <NavLink to="/">
-                <Button style={buttonStyle} variant="primary">
-                글목록
-                </Button>
-            </NavLink>
             <NavLink to="/boardWrite">
                 <Button style={buttonStyle} variant="primary">
-                글쓰기
+                Write
+                </Button>
+            </NavLink>
+            <NavLink to="/login">
+                <Button style={buttonLogin} variant="primary">
+                Login
                 </Button>
             </NavLink>
             <Button style={buttonStyle} onClick={this.logout} variant="primary">
-            로그아웃
+            Logout
             </Button>
           </Navbar.Collapse>
         </Navbar>

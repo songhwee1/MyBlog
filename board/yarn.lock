@@ -1150,6 +1150,12 @@
   dependencies:
     prop-types "^15.7.2"
 
+"@ckeditor/ckeditor5-react@ckeditor/ckeditor5-react":
+  version "3.0.2"
+  resolved "https://codeload.github.com/ckeditor/ckeditor5-react/tar.gz/929d4e26bd261bd90d60f2fb0798d0e18e0cf89a"
+  dependencies:
+    prop-types "^15.7.2"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"

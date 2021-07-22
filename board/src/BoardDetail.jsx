@@ -45,7 +45,10 @@ class BoardDetail extends Component {
       _id: this.props.location.query._id
     };
     const marginBottom = {
-      marginBottom: 5
+      marginBottom: 5,
+      background: "black",
+      border:"black",
+      color: "white"
     };
     axios
       .post("http://localhost:8080/board/detail", send_param)
@@ -85,9 +88,8 @@ class BoardDetail extends Component {
                     글 수정
                   </Button>
                 </NavLink>
-                <Button
-                  block
-                  onClick={this.deleteBoard.bind(
+                &nbsp; 
+                <Button block style={marginBottom} onClick={this.deleteBoard.bind(
                     null,
                     this.props.location.query._id
                   )}
