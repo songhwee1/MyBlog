@@ -7,7 +7,6 @@ Node.js + React + MongoDB
     - react-router-dom
     - axios
     - jquery
-    - jquery.cookie
 
 - Backend Server  Node.js
     - express
